@@ -1,6 +1,6 @@
 ## tools-setup-code
 
-Tools will deploy hashicoprp vault instance, there are three steps
+Tools will deploy hashicorp vault instance, there are three steps
 
 ### 1. create instance
 ```text
