@@ -16,6 +16,9 @@ http://vault_public_ip:8200
 Download keys in the json format
 ```
 ### 4. add passwords and parameter values in the vault
+```text
 cd /misc/vault_secrets
 make vault_token=xxxxxxxxxxxxxxxxxxxxx
+```
+
 
