@@ -2,7 +2,7 @@ terraform {
   backend "s3" {
     bucket = "hptldevops-state"
     key    = "vault-secrets/terraform.tfstate"
-    region = "us-east-1"
+    region = "us-east-2"
 
   }
 }
