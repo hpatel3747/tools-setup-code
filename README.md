@@ -30,10 +30,20 @@ login and verify that two Key Voults are created
 1. infra-secrets
 2.roboshop-dev
 ```
-### deploy github-runner 
+### 5. deploy github-runner (provide token in following steps from step 3 )
 ```text
 git pull ; make ansible tool_name=github-runner -e vault_token=""
 ```
+### 6. login to github-runner and do these steps
+```text
+login to github
+create organization
+open a roboshop-terraform repository
+click setting | actions | runner | new self hosted runner
+follow the steps listed there to activate runner
+note that runner will show up for the roboshop-terraform repository only
+```
+
 ### create token for gh cli
 ```text
 gh api --method POST -H "Accept: application/vnd.github+jason" -H
