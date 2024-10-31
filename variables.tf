@@ -19,10 +19,10 @@ variable "tools" {
 }
 
 variable "zone_id" {
-  default = "Z02249652EM5BAO495DZ1"
+  default = "Z034492616CL1VL5T8KC8"
 }
 
 variable "domain_name" {
-  default = "rdevopsb81.online"
+  default = "hptldevops.online"
 }
 
