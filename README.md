@@ -22,6 +22,10 @@ make vault_token=xxxxxxxxxxxxxxxxxxxxx
 ```
 ### To deploy git hub runner
 ```text
+#first create infra(github-runnner instnce)
+make infra
+```
+```text
 git pull ; make ansible tool_name=github-runner -e vault_token=""
 ```
 ### create token for gh cli
