@@ -39,6 +39,14 @@ resource "aws_instance" "instance" {
   root_block_device {
     volume_size = var.volume_size
   }
+  instance_market_options {
+    market_type = "spot"
+    spot_options {
+      instance_interruption_behavior = "stop"
+      spot_instance_type             = "persistent"
+    }
+  }
+  iam_instance_profile = aws_iam_instance_profile.instance_profile.name
 }
 
 resource "aws_route53_record" "record-public" {
@@ -57,4 +65,5 @@ resource "aws_route53_record" "record-internal" {
   ttl     = "30"
   records = [aws_instance.instance.private_ip]
 }
+
 
