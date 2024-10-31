@@ -4,6 +4,7 @@ Tools will deploy hashicorp vault instance, there are three steps
 
 ### 1. create instance
 ```text
+#first create infra(github-runner and vault instance)
 make infra
 ```
  ### 2.Install vault on ec2 instance
@@ -29,11 +30,7 @@ login and verify that two Key Voults are created
 1. infra-secrets
 2.roboshop-dev
 ```
-### To deploy git hub runner
-```text
-#first create infra(github-runnner instnce)
-make infra
-```
+### deploy github-runner 
 ```text
 git pull ; make ansible tool_name=github-runner -e vault_token=""
 ```
