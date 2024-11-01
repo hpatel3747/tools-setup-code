@@ -14,7 +14,7 @@ make ansible tool_name=vault
 ```
 ### 3. login to vault
 ```text
-http://vault_public_ip:8200
+http://vault.hptldevops.online:8200/
 Key shares: 1
 Key threshold: 1
 click initialize
@@ -22,7 +22,6 @@ Download keys in the json format
 click on continue to Unseal
 enter the key from the downloaded keys
 enter the token to login
-
 ```
 ### 4. add passwords and parameter values in the vault
 ```text
