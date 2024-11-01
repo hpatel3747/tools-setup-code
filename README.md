@@ -10,7 +10,6 @@ make infra
 ```
  ### 2.Install vault on ec2 instance
 ```text
-cd misc/vault_secrets
 make ansible tool_name=vault
 ```
 ### 3. login to vault
