@@ -1,14 +1,16 @@
 ## tools-setup-code
 
-Tools will deploy hashicorp vault instance, there are three steps
+Tools will deploy hashicorp vault and github-runner instances
 
 ### 1. create instance
 ```text
-#first create infra(github-runner and vault instance)
+#first create infra(github-runner and vault instance) (if run again will create new DNS entries for both instances)
+#if need to recreate instances, do "terraform destroy" first and then "make infra"
 make infra
 ```
  ### 2.Install vault on ec2 instance
 ```text
+cd misc/vault_secrets
 make ansible tool_name=vault
 ```
 ### 3. login to vault
