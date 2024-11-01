@@ -22,6 +22,7 @@ Download keys in the json format
 click on continue to Unseal
 enter the key from the downloaded keys
 enter the token to login
+
 ```
 ### 4. add passwords and parameter values in the vault
 ```text
