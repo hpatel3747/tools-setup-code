@@ -25,7 +25,7 @@ enter the token to login
 ```
 ### 4. add passwords and parameter values in the vault
 ```text
-cd /misc/vault_secrets
+cd misc/vault_secrets
 make vault_token=xxxxxxxxxxxxxxxxxxxxx
 login and verify that two Key Voults are created
 1. infra-secrets
