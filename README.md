@@ -37,12 +37,13 @@ git pull ; make ansible tool_name=github-runner -e vault_token=""
 ```
 ### 6. login to github-runner and do these steps
 ```text
-login to github
-create organization
-open a roboshop-terraform repository
-click setting | actions | runner | new self hosted runner
-follow the steps listed there to activate runner
-note that runner will show up for the roboshop-terraform repository only
+login to github-runner
+click on organization hpatel3747 | settings | Actions | runners | New runner | New Self-hosted runnner | Linux
+mkdir actions-runner && cd actions-runner
+curl -o actions-runner-linux-x64-2.320.0.tar.gz -L https://github.com/actions/runner/releases/download/v2.320.0/actions-runner-linux-x64-2.320.0.tar.gz
+tar xzf ./actions-runner-linux-x64-2.320.0.tar.gz
+./config.sh --url https://github.com/hpatel3747 --token BMS6GP7JUH5EOLBONQMS7T3HET5Z6
+./run.sh
 ```
 
 ### create token for gh cli
