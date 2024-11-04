@@ -46,7 +46,7 @@ resource "aws_instance" "instance" {
       spot_instance_type             = "persistent"
     }
   }
-  iam_instance_profile = aws_iam_instance_profile.instance_profile.name
+  iam_instance_profile = length(var.policy_list) > 0 ? aws_iam_instance_profile.instance_profile[0].name : null
 }
 
 resource "aws_route53_record" "record-public" {
@@ -65,4 +65,5 @@ resource "aws_route53_record" "record-internal" {
   ttl     = "30"
   records = [aws_instance.instance.private_ip]
 }
+
 
