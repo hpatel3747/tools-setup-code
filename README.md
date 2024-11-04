@@ -29,7 +29,7 @@ cd misc/vault_secrets
 make vault_token=xxxxxxxxxxxxxxxxxxxxx
 login and verify that two Key Voults are created
 1. infra-secrets
-2.roboshop-dev
+2. Roboshop-dev
 ```
 -Note: every time you stop and start vault make you sure you unseal the vault for further process
 ### 5. deploy github-runner (provide token in following steps from step 3 )
