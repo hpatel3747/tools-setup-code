@@ -46,7 +46,6 @@ tar xzf ./actions-runner-linux-x64-2.320.0.tar.gz
 ./config.sh --url https://github.com/hpatel3747 --token BMS6GP7JUH5EOLBONQMS7T3HET5Z6
 ./run.sh
 ```
-
 ### create token for gh cli
 ```text
 gh api --method POST -H "Accept: application/vnd.github+jason" -H
