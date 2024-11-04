@@ -66,4 +66,3 @@ resource "aws_route53_record" "record-internal" {
   records = [aws_instance.instance.private_ip]
 }
 
-
