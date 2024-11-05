@@ -63,7 +63,7 @@ $./config.sh -unattnded --url https:..github.com/hpatel3747 --token {paste-the-t
 1. stop the instance (github-runner instance in this case)
 2. add 10 gb on the instance volume
 3. start the instance and login
-4. use following three commands to extend diskspace and add 10gb t the home volume
+4. use following three commands to extend diskspace and add 10gb to the home volume
 ```text
 df -h
 sudo growpart /dev/nvme0n1 4
