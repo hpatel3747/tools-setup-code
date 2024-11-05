@@ -69,4 +69,6 @@ df -h
 sudo growpart /dev/nvme0n1 4
 sudo lvextend -r -L +10g /dev/mapper/RootVG-homeVol
 ```
-
+### how to make call to token from workflow
+-- Github allows to store the secret, github | hpatel3747 | settings | security | secrets and variables | actions | New organization secret
+-- create secret vault_token with appropriate token value. This will be called in workflow in github/action 
