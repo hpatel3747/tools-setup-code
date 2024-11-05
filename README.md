@@ -58,6 +58,15 @@ gh api -H "Accept: application/vnd.github+json" -H "X-GitHub-Api-Version: 2022-1
 #login to github =-runner
 #cd /actions-runner
 $./config.sh -unattnded --url https:..github.com/hpatel3747 --token {paste-the-token-here} --name $(hostname) --runnergroup Default
-
+```
+### How to add disk space 
+1. stop the instance (github-runner instance in this case)
+2. add 10 gb on the instance volume
+3. start the instance and login
+4. use following three commands to extend diskspace and add 10gb t the home volume
+```text
+df -h
+sudo growpart /dev/nvme0n1 4
+sudo lvextend -r -L +10g /dev/mapper/RootVG-homeVol
 ```
 
