@@ -31,7 +31,17 @@ resource "vault_generic_secret" "frontend" {
   "cart_url":   "http://cart-dev.hptldevops.online:8080/",
   "user_url":   "http://user-dev.hptldevops.online:8080/",
   "shipping_url":   "http://shipping-dev.hptldevops.online:8080/",
-  "payment_url":   "http://payment-dev.hptldevops.online:8080/"
+  "payment_url":   "http://payment-dev.hptldevops.online:8080/",
+  "CATALOGUE_HOST" : "catalogue-dev.hptldevops.online",
+  "CATALOGUE_PORT" : 8080,
+  "USER_HOST" : "user-dev.hptldevops.online",
+  "USER_PORT" : 8080,
+  "CART_HOST" : "cart-dev.hptldevops.online",
+  "CART_PORT" : 8080,
+  "SHIPPING_HOST" : "shipping-dev.hptldevops.online",
+  "SHIPPING_PORT" : 8080,
+  "PAYMENT_HOST" : "payment-dev.hptldevops.online",
+  "PAYMENT_PORT" : 8080
 }
 EOT
 }
@@ -42,7 +52,11 @@ resource "vault_generic_secret" "catalogue" {
   data_json = <<EOT
 {
   "MONGO": "true",
-  "MONGO_URL" : "mongodb://mongodb-dev.hptldevops.online:27017/catalogue"
+  "MONGO_URL" : "mongodb://mongodb-dev.hptldevops.online:27017/catalogue",
+  "DB_TYPE": "mongo",
+  "APP_GIT_URL": "https://github.com/roboshop-devops-project-v3/catalogue",
+  "DB_HOST": "mongodb-dev.hptldevops.online",
+  "SCHEMA_FILE": "db/master-data.js"
 }
 EOT
 }
@@ -78,7 +92,11 @@ resource "vault_generic_secret" "shipping" {
 {
   "CART_ENDPOINT": "cart-dev.hptldevops.online:8080",
   "DB_HOST" : "mysql-dev.hptldevops.online",
-  "mysql_root_password" : "RoboShop@1"
+  "mysql_root_password" : "RoboShop@1",
+  "DB_TYPE": "mysql",
+  "APP_GIT_URL": "https://github.com/roboshop-devops-project-v3/shipping",
+  "DB_USER": "root",
+  "DB_PASS": "RoboShop@1"
 }
 EOT
 }
