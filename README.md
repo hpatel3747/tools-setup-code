@@ -72,3 +72,8 @@ sudo lvextend -r -L +10g /dev/mapper/RootVG-homeVol
 ### how to make call to token from workflow
 - Github allows to store the secret in github | hpatel3747 | settings | security | secrets and variables | actions | New organization secret
 - create secret vault_token with appropriate token value. This will be called in workflow in github/action 
+### how to unseal vault
+login to vault server and sudo this cmd
+```text
+# VAULT_ADDR=http://127.0.0.1:8200 vault operator unseal "type_in_unseal)key"
+```
